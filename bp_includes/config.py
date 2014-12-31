@@ -21,11 +21,11 @@ config = {
                               'environment_args': {'extensions': ['jinja2.ext.i18n']}},
 
     # application name
-    'app_name': "GAE Boilerplate",
+    'app_name': "Appname",
 
     # the default language code for the application.
     # should match whatever language the site uses when i18n is disabled
-    'app_lang': 'en',
+    'app_lang': 'es',
 
     # Locale code = <language>_<territory> (ie 'en_US')
     # to pick locale codes see http://cldr.unicode.org/index/cldr-spec/picking-the-right-language-code
@@ -33,7 +33,8 @@ config = {
     # Language codes defined under iso 639-1 http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
     # Territory codes defined under iso 3166-1 alpha-2 http://en.wikipedia.org/wiki/ISO_3166-1
     # disable i18n if locales array is empty or None
-    'locales': ['en_US', 'es_ES', 'it_IT', 'zh_CN', 'id_ID', 'fr_FR', 'de_DE', 'ru_RU', 'pt_BR', 'cs_CZ','vi_VN','nl_NL'],
+    'locales': ['en_US', 'es_ES'],
+
 
     # contact page email settings
     'contact_sender': "SENDER_EMAIL_HERE",

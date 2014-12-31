@@ -4,15 +4,18 @@ config = {
     # Don't use values defined here
     'environment': "boilerplate",
 
+    'app_name': "crCasas @boilerplate",
+
+
     # contact page email settings
-    'contact_sender': "appengine@beecoss.com",
-    'contact_recipient': "appengine@beecoss.com",
+    'contact_sender': "admin@crcasas.com",
+    'contact_recipient': "admin@crcasas.com",
 
     'send_mail_developer': False,
 
     # fellas' list
     'developers': (
-        ('GAE Developer', 'gae-developer2014@beecoss.com'),
+        ('Oscar Valverde', 'ovalverde@crcasas.com'),
     ),
 
     # It is just an example to fill out this value
@@ -69,7 +72,9 @@ config = {
     # webapp2 authentication
     'webapp2_extras.auth': { 'cookie_name': 'gae_session' },
 
+
     # ----> ADD MORE CONFIGURATION OPTIONS HERE <----
+
 
 
 }

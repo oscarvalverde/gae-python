@@ -1,11 +1,11 @@
-application: sandengine
+application: cr-gae-python
 version: dev
 runtime: python27
 api_version: 1
 threadsafe: true
 
 env_variables:
-  theme: 'default'
+  theme: 'mytheme'
 
 default_expiration: "30d"
 

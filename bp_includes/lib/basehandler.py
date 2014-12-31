@@ -289,7 +289,7 @@ class BaseHandler(webapp2.RequestHandler):
             'path_for_language': self.path_for_language,
             'is_mobile': self.is_mobile,
             'locale_iso': locale_iso, # babel locale object
-            'locale_language': language.capitalize() + " (" + territory.capitalize() + ")", # babel locale object
+            'locale_language': language.capitalize() , # babel locale object
             'locale_language_id': language_id, # babel locale object
             'locales': self.locales,
             'provider_uris': self.provider_uris,

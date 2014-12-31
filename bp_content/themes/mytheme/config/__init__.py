@@ -6,9 +6,10 @@ It takes precedence over the config located in the boilerplate package.
 import os
 
 if 'HTTP_HOST' in os.environ and os.environ['HTTP_HOST'] == "cr-gae-python.appspot.com":
-    # Load Boilerplate config only in http://appengine.beecoss.com
+    # Load Boilerplate config only in http://crcasas.com
     # this code is here just for testing purposes
-    from boilerplate import config
+    from testing import config
+    # from boilerplate import config
 elif "SERVER_SOFTWARE" in os.environ:
     if os.environ['SERVER_SOFTWARE'].startswith('Dev'):
         from localhost import config

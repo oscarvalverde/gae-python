@@ -256,7 +256,8 @@ class SocialLoginHandler(BaseHandler):
 
         elif provider_name == "facebook":
             self.session['linkedin'] = None
-            perms = ['email', 'publish_stream']
+            # changed from perms = ['email', 'publish_stream'] to request only data does not requires facebook review
+            perms = ['email']
             self.redirect(facebook.auth_url(self.app.config.get('fb_api_key'), callback_url, perms))
 
         elif provider_name == 'linkedin':
