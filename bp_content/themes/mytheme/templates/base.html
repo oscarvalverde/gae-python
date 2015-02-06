@@ -27,6 +27,9 @@
     <!-- All JavaScript at the bottom, except this Modernizr build.
        Modernizr enables HTML5 elements & feature detects for optimal performance. -->
     <script src="/boilerplate/js/libs/modernizr-2.7.1.min.js"></script>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 <body>
 <!--[if lt IE 9]>
@@ -35,7 +38,7 @@
     	to experience this site.{% endtrans %}</p>
     <![endif]-->
 
-<div id="page" class="wrapper">
+<div id="page" >
     {% block navbar %}
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container-fluid">
@@ -55,15 +58,16 @@
                             <button type="submit" class="btn btn-default">Buscar</button>
                       </form>
                     </li>
-                    <li>              
-                      <form class="navbar-form navbar" role="search">
-                            <div class="form-group">
-                              <input type="text" class="form-control " placeholder="Número de anuncio">
-                            </div>
-                            <button type="submit" class="btn btn-default">Ir</button>
-                      </form>
-                    </li>                   
-                    <li><a href="#about">Anunciar</a></li>
+                    <!-- <li>              
+                       <form class="navbar-form navbar" role="search">
+                             <div class="form-group">
+                               <input type="text" class="form-control " placeholder="Número de anuncio">
+                             </div>
+                             <button type="submit" class="btn btn-default">Ir</button>
+                       </form>
+                    </li>  -->                 
+                    <li><a href="{{ uri_for("register") }}">Registrarse</a></li>                    
+                    <li><a href="{{ uri_for("advertising") }}">Anunciar</a></li>
                     <li><a href="{{ uri_for("about") }}">Acerca de</a></li>
 
                 </ul>
@@ -218,18 +222,73 @@
 
     </div>
     <!-- /content -->
-    <div class="push"></div>
+    
+    {% block footer %}
+    <footer class="footer">
+      <div class="container ">
+
+        <ul class="social">
+            <li>
+                <a href="https://www.facebook.com/crCasas" title="Facebook" rel="nofollow" target="_blank">
+                 <span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>   
+                </a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/+Crcasasweb" title="google+" rel="nofollow" target="_blank">
+                 <span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>   
+                </a>
+            </li>
+
+            <li>
+                <a href="https://twitter.com/crcasascom" title="Twitter" rel="nofollow" target="_blank">
+                 <span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>   
+                </a>
+            </li>
+
+            <li>
+                <a href="http://blog.crcasas.com" title="Blog" rel="nofollow" target="_blank">
+                 <span class="fa-stack fa-lg">
+                   <i class="fa fa-circle fa-stack-2x"></i>
+                   <i class="fa fa-wordpress fa-stack-1x fa-inverse"></i>
+                  </span>   
+                </a>
+            </li>            
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="text-center">
+            <a href="{{ uri_for("about") }}">Acerca</a> - 
+            <a href="{{ uri_for("privacy") }}">Política de Privacidad</a> - 
+            <a href="{{ uri_for("terms") }}">Términos y Condiciones</a>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="text-center">
+            <p>Desarrollado por Novatec Internacional S.A.</p>
+        </div>
+      </div>
+
+    </footer>            
+    {% endblock %}
+
+
+
 
 </div>
 <!-- /page -->
 
-    {% block footer %}
-    <div class="footer">
-      <div class="container">
-        <p class="text-muted">Desarrollado por Novatec Internacional S.A. 2</p>
-      </div>
-    </div>             
-    {% endblock %}
+
 
 
 

@@ -132,10 +132,10 @@ libraries:
 error_handlers:
   # Only errors with error_code, don't put a default error here
   - error_code: over_quota
-    file: bp_content/themes/default/errors/over_quota.html
+    file: bp_content/themes/mytheme/errors/over_quota.html
 
   - error_code: dos_api_denial
-    file: bp_content/themes/default/errors/dos_api_denial.html
+    file: bp_content/themes/mytheme/errors/dos_api_denial.html
 
   - error_code: timeout
-    file: bp_content/themes/default/errors/timeout.html
+    file: bp_content/themes/mytheme/errors/timeout.html

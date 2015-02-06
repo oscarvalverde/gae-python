@@ -33,7 +33,7 @@ from lib.basehandler import BaseHandler
 from lib.decorators import user_required
 from lib.decorators import taskqueue_method
 from lib import facebook
-
+from bp_content.themes.mytheme.handlers.models import update_counter
 
 class LoginRequiredHandler(BaseHandler):
     def get(self):
@@ -1415,7 +1415,18 @@ class HomeRequestHandler(RegisterBaseHandler):
 
     def get(self):
         """ Returns a simple HTML form for home """
-        params = {}
+
+        #listing_id = ListingId()
+
+        #next_id = listing_id.get_next()
+
+        
+
+        params = {
+            'next_id': update_counter(),
+        }
+
+ 
         return self.render_template('home.html', **params)
 
 

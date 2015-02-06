@@ -2,6 +2,14 @@ from webapp2_extras.appengine.auth.models import User
 from google.appengine.ext import ndb
 
 
+
+
+# def nextValidator(prop, value):
+#  return isdigit(value)
+# , validator=nextValidator
+
+
+
 class User(User):
     """
     Universal user model. Can be used with App Engine's default users API,

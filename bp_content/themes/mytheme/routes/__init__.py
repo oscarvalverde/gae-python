@@ -15,7 +15,11 @@ _routes = [
     RedirectRoute('/settings/delete_account', handlers.DeleteAccountHandler, name='delete-account', strict_slash=True),
     RedirectRoute('/contact/', handlers.ContactHandler, name='contact', strict_slash=True),
     RedirectRoute('/about/', handlers.AboutHandler, name='about', strict_slash=True),
-   
+    RedirectRoute('/privacy/', handlers.PrivacyHandler, name='privacy', strict_slash=True),  
+    RedirectRoute('/terms/', handlers.TermsHandler, name='terms', strict_slash=True),  
+    RedirectRoute('/advertising/', handlers.AdvertisingHandler, name='advertising', strict_slash=True),  
+    RedirectRoute('/send_sms/', handlers.SendSMSHandler, name='send_sms', strict_slash=True),  
+    RedirectRoute('/twiml/', handlers.TwimlHandler, name='twiml', strict_slash=True),  
 ]
 
 def get_routes():

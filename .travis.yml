@@ -9,5 +9,6 @@ install:
   - pip install pycrypto
   - pip install PyQuery
   - pip install mock
+  - pip install twilio
 # command to run tests
 script:  theme=default python testrunner.py google_appengine .

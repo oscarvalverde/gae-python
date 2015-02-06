@@ -26,7 +26,106 @@ from bp_includes.lib import captcha, utils
 import bp_includes.models as models_boilerplate
 import forms as forms
 
+from twilio import twiml
+from twilio.rest import TwilioRestClient
 
+class TwimlHandler(BaseHandler):
+    """
+    TODO
+    """
+
+    def get(self):
+        """ TODO """
+
+        params = {
+            
+        }
+
+        return self.render_template('twiml.html', **params)
+
+    def post(self):
+
+        return self.redirect_to('twiml')
+
+class SendSMSHandler(BaseHandler):
+    """
+    TODO
+    """
+
+    def get(self):
+        """ TODO """
+
+        params = {
+            
+        }
+
+        account_sid = "AC8dd0b86888fbfb5f6b2b2a3594add4df"
+        auth_token = "3e7ee07f1db33766d99423afb21cbf04"
+        client = TwilioRestClient(account_sid, auth_token)
+        # replace "to" and "from_" with real numbers
+        rv = client.messages.create(to="+50683948608",
+                                    from_="+19802382281",
+                                    body="Hello Monkey!")
+
+        return self.render_template('send_sms.html', **params)
+
+    def post(self):
+
+        return self.redirect_to('send_sms')
+
+class AdvertisingHandler(BaseHandler):
+    """
+    TODO
+    """
+
+    def get(self):
+        """ TODO """
+
+        params = {
+            
+        }
+
+        return self.render_template('advertising.html', **params)
+
+    def post(self):
+
+        return self.redirect_to('advertising')
+
+class TermsHandler(BaseHandler):
+    """
+    TODO
+    """
+
+    def get(self):
+        """ TODO """
+
+        params = {
+            
+        }
+
+        return self.render_template('terms.html', **params)
+
+    def post(self):
+
+        return self.redirect_to('terms')
+
+class PrivacyHandler(BaseHandler):
+    """
+    TODO
+    """
+
+    def get(self):
+        """ TODO """
+
+        params = {
+            
+        }
+
+        return self.render_template('privacy.html', **params)
+
+    def post(self):
+
+        return self.redirect_to('privacy')
 
 
 class AboutHandler(BaseHandler):

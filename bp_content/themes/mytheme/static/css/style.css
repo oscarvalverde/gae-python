@@ -1,2 +1,49 @@
 .home_bp{background:transparent url(../img/logo.jpg) top center no-repeat;padding-top:20em;text-align:center}.home_bp h1{font-size:1.6em}.home_bp p{font-size:1.2em}
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 120px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 120px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom colors
+-------------------------------------------------- */
+
+.footer {
+  background-color: #000;
+  color: #666;
+}
+
+/* Social icons
+-------------------------------------------------- */
+
+
+.social {
+margin-top: 10px;
+list-style-type: none;
+padding-left: 0;
+text-align: center;
+}
+
+
+.social > li
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline;
+}
